@@ -6,8 +6,10 @@
   "scripts": {
     "start": "npm run serve",
     "test": "karma start --single-run",
-    "build": "set NODE_ENV=production&& gulp build",
+    "build": "gulp build",
     "serve": "webpack-dev-server --inline --hot",
+    "build-prod": "set NODE_ENV=production&& gulp build",
+    "build-dev": "set NODE_ENV=development&& gulp build",
     "lint:css": "stylelint src/app/**/*.scss",
     "lint:js": "eslint src/app/**/*.js",
     "lint": "npm run lint:js --silent & npm run lint:css --silent"

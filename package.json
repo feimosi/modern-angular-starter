@@ -5,7 +5,7 @@
   "main": "src/index.html",
   "scripts": {
     "start": "npm run serve",
-    "serve": "webpack-dev-server --inline --hot --content-base ./src/",
+    "serve": "webpack-dev-server --inline --hot --content-base ./src/ --port 9000",
     "test": "karma start --single-run",
     "build": "gulp build",
     "build-prod": "set NODE_ENV=production&& gulp build",

@@ -15,8 +15,6 @@ gulp.task('build:clean', () => {
 });
 
 gulp.task('build:webpack', (callback) => {
-    webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
-
     webpack(webpackConfig, (err, stats) => {
         if(err) {
             throw new gutil.PluginError('webpack', err);

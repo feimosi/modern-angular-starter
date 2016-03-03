@@ -37,6 +37,7 @@ const commonConfig = {
             { test: /\.css$/, loader: extractVendor.extract('css') },
             { test: /\.scss$/, loader: extractSCSS.extract('css!postcss') },
             { test: /\.html$/, loader: 'raw' },
+            { test: /\.jade$/, loader: 'jade' },
             { test: /\.json$/, loader: 'json' },
             { test: /\.(png|jpg|gif)$/, loader: `url?limit=10000&name=img/[name]${hash}.[ext]` },
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },

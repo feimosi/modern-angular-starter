@@ -13,7 +13,7 @@ import precss from 'precss';
 import stylelint from 'stylelint';
 
 // Config
-import { paths, env } from './config';
+import { paths, serverUrl, env } from './config';
 
 const hash = env === 'production' ? '-[hash:8]' : '';
 const extractVendor = new ExtractTextPlugin(`${paths.build.css}vendor${hash}.css`);
@@ -68,6 +68,14 @@ const commonConfig = {
         extractVendor,
         extractSCSS,
     ],
+    devServer: {
+        proxy: {
+            '/api/*': {
+                target: serverUrl,
+            },
+        },
+        historyApiFallback: true,
+    },
 };
 
 const developmentConfig = (config) => {

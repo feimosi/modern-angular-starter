@@ -12,4 +12,6 @@ export const paths = {
     },
 };
 
+export const serverUrl = 'http://127.0.0.1:8080';
+
 export const env = process.env.NODE_ENV;
